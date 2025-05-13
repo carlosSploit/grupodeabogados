@@ -28,7 +28,7 @@ function Header() {
     // substrae todos los patch de la url
     const patch = urlPathech[urlPathech.length - 1]
     // substrae el item de la url
-    const index = listUrl.reduce((acumul,itemAux,ind) =>{
+    const index = (patch == "")?0:listUrl.reduce((acumul,itemAux,ind) =>{
       acumul = (itemAux.indexOf(patch) > -1)? ind : acumul
       return acumul
     }, [0])
